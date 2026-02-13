@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deshpande Associates | GST, ITR, FSSAI, MSME</title>
+  <meta name="description" content="Deshpande Associates - GST Registration, GST Filing, ITR, MSME/Udyam, FSSAI. All India Service Provider." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --bg2:#fbfaf7;
+      --card:#ffffff;
+      --text:#101828;
+      --muted:#475467;
+      --line:rgba(16,24,40,.10);
+
+      --gold:#caa24a;
+      --gold2:#a77a1a;
+
+      --blue:#1e4ed8;
+      --blue2:#0b2f7a;
+
+      --wa:#25D366;
+
+      --radius:18px;
+      --shadow: 0 14px 45px rgba(16,24,40,.10);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      color:var(--text);
+
+      /* MORE GOLD TEXTURE ADDED */
+      background:
+        radial-gradient(900px 520px at 10% 0%, rgba(202,162,74,.26), transparent 55%),
+        radial-gradient(900px 520px at 90% 10%, rgba(30,78,216,.10), transparent 55%),
+        radial-gradient(700px 480px at 50% 90%, rgba(202,162,74,.18), transparent 60%),
+        linear-gradient(180deg, #ffffff, #f8fafc);
+
+      line-height:1.6;
+    }
+
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1160px;margin:auto;padding:0 18px}
+
+    /* NAV */
+    .nav{
+      position:sticky;top:0;z-index:100;
+      background: rgba(255,255,255,.88);
+      backdrop-filter: blur(14px);
+      border-bottom:1px solid var(--line);
+      box-shadow: 0 8px 25px rgba(16,24,40,.06);
+    }
+    .nav-inner{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:14px 0;
+      gap:14px;
+    }
+
+    .brand{
+      display:flex;align-items:center;gap:12px;
+      min-width:240px;
+    }
+
+    /* LOGO IMAGE */
+    .logo-img{
+      width:52px;
+      height:52px;
+      border-radius:16px;
+      border:1px solid rgba(202,162,74,.45);
+      background: rgba(255,255,255,.9);
+      padding:6px;
+      object-fit:contain;
+      box-shadow: 0 10px 30px rgba(16,24,40,.10);
+    }
+
+    .brand-title{
+      font-weight:900;
+      letter-spacing:.3px;
+      line-height:1.1;
+      background: linear-gradient(90deg, var(--gold2), var(--blue2));
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+    .brand-sub{
+      color:var(--muted);
+      font-size:12px;
+      font-weight:800;
+      margin-top:2px;
+    }
+
+    .menu{display:flex;gap:14px;align-items:center}
+    .menu a{
+      color:var(--muted);
+      font-weight:800;
+      font-size:14px;
+      padding:10px 12px;
+      border-radius:14px;
+    }
+    .menu a:hover{
+      color:var(--text);
+      background:rgba(16,24,40,.04);
+    }
+
+    /* HERO */
+    .hero{padding:50px 0 18px}
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.2fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    .hero-card{
+      border:1px solid var(--line);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,1), rgba(251,250,247,1));
+      border-radius: var(--radius);
+      padding:26px;
+      box-shadow: var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero-card::before{
+      content:"";
+      position:absolute;
+      inset:-120px;
+      background:
+        radial-gradient(circle, rgba(202,162,74,.24), transparent 60%),
+        radial-gradient(circle, rgba(30,78,216,.10), transparent 60%);
+      transform:rotate(10deg);
+      z-index:0;
+    }
+
+    .hero-card *{
+      position:relative;
+      z-index:1;
+    }
+
+    .top-strip{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:14px;
+    }
+    .certificate{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 12px;
+      border-radius:999px;
+      border:1px solid rgba(202,162,74,.35);
+      background: rgba(202,162,74,.10);
+      color:var(--gold2);
+      font-weight:900;
+      font-size:13px;
+      letter-spacing:.2px;
+    }
+    .certificate b{color:var(--text)}
+    .location{
+      color:var(--muted);
+      font-weight:800;
+      font-size:13px;
+      padding:10px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.80);
+    }
+
+    h1{
+      margin:8px 0 10px;
+      font-size:44px;
+      line-height:1.08;
+      letter-spacing:-.8px;
+    }
+    .sub{
+      margin:0 0 12px;
+      color:var(--muted);
+      font-size:16px;
+      max-width:62ch;
+      font-weight:600;
+    }
+
+    .mini{
+      margin-top:16px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-weight:800;
+      font-size:13px;
+    }
+    .mini span{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.80);
+      padding:9px 12px;
+      border-radius:999px;
+    }
+
+    /* SECTIONS */
+    .section{padding:28px 0}
+    .section-title{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:14px;
+    }
+    .section-title h2{
+      margin:0;
+      font-size:26px;
+      letter-spacing:-.3px;
+      background: linear-gradient(90deg, var(--gold2), var(--blue2));
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+    .section-title p{
+      margin:0;
+      color:var(--muted);
+      max-width:64ch;
+      font-weight:650;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:16px;
+    }
+    .card{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.97);
+      border-radius: var(--radius);
+      padding:18px;
+      transition:.2s;
+      position:relative;
+      overflow:hidden;
+      box-shadow: 0 10px 30px rgba(16,24,40,.06);
+    }
+
+    .card::before{
+      content:"";
+      position:absolute;
+      top:-60px;
+      right:-60px;
+      width:140px;
+      height:140px;
+      background: radial-gradient(circle, rgba(202,162,74,.18), transparent 70%);
+      z-index:0;
+    }
+
+    .card *{
+      position:relative;
+      z-index:1;
+    }
+
+    .card:hover{
+      transform:translateY(-2px);
+      border-color:rgba(202,162,74,.30);
+      box-shadow: 0 18px 45px rgba(16,24,40,.10);
+    }
+    .card .top{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:10px;
+    }
+    .card h4{margin:0;font-size:16px}
+    .price{
+      font-weight:900;
+      color:var(--gold2);
+      font-size:16px;
+      white-space:nowrap;
+    }
+    .card p{margin:0;color:var(--muted);font-size:14px;font-weight:600}
+    .pill{
+      display:inline-flex;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid rgba(202,162,74,.22);
+      background: rgba(202,162,74,.08);
+      color:var(--gold2);
+      font-weight:900;
+      font-size:12px;
+      margin-top:12px;
+    }
+
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      gap:10px;
+      padding:12px 14px;
+      border-radius:16px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.75);
+      color:var(--text);
+      font-weight:900;
+      font-size:14px;
+      cursor:pointer;
+      transition:.2s;
+      white-space:nowrap;
+    }
+    .btn:hover{transform:translateY(-1px);border-color:rgba(16,24,40,.20)}
+
+    .btn-wa{
+      border:1px solid rgba(37,211,102,.35);
+      background: rgba(37,211,102,.10);
+      color:#0b3b1d;
+      font-weight:900;
+    }
+
+    .card-actions{
+      margin-top:14px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .btn-small{
+      padding:11px 12px;
+      border-radius:14px;
+      font-size:13px;
+    }
+
+    /* CONTACT */
+    .contact{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:16px;
+    }
+
+    /* UPDATED CONTACT BOX PREMIUM */
+    .box{
+      border:1px solid rgba(202,162,74,.28);
+      background: rgba(255,255,255,.98);
+      border-radius: 22px;
+      padding:20px;
+      box-shadow: 0 14px 40px rgba(16,24,40,.08);
+      position:relative;
+      overflow:hidden;
+      transition:.25s;
+    }
+
+    .box:hover{
+      transform: translateY(-2px);
+      border-color: rgba(30,78,216,.25);
+      box-shadow: 0 18px 55px rgba(16,24,40,.12);
+    }
+
+    .box::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: linear-gradient(135deg, rgba(202,162,74,.10), rgba(30,78,216,.06));
+      z-index:0;
+    }
+
+    .box *{
+      position:relative;
+      z-index:1;
+    }
+
+    .box h3{
+      margin:0 0 12px;
+      font-size:18px;
+      font-weight:900;
+      letter-spacing:-.2px;
+      background: linear-gradient(90deg, var(--gold2), var(--blue2));
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .box .info{
+      color:var(--muted);
+      font-weight:750;
+      font-size:14px;
+      line-height:1.85;
+    }
+
+    .box .info a{
+      color: var(--blue2);
+      font-weight:900;
+      text-decoration:none;
+    }
+
+    .box .info a:hover{
+      text-decoration:underline;
+    }
+
+    /* CONTACT DETAILS CARD (SAME DESIGN AS SIDE) */
+    .side{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.90);
+      border-radius: var(--radius);
+      padding:22px;
+      box-shadow: var(--shadow);
+      position:relative;
+      overflow:hidden;
+      margin-top:18px;
+    }
+
+    .side::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: linear-gradient(135deg, rgba(202,162,74,.10), rgba(30,78,216,.06));
+      z-index:0;
+    }
+
+    .side *{
+      position:relative;
+      z-index:1;
+    }
+
+    .side h3{margin:0 0 8px;font-size:18px}
+    .side p{margin:0 0 14px;color:var(--muted);font-weight:600}
+    .side ul{margin:0;padding-left:18px;color:var(--muted);font-weight:650}
+    .side li{margin:8px 0}
+
+    /* FOOTER */
+    .footer{
+      padding:26px 0;
+      border-top:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,1), rgba(248,250,252,1));
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .footer-inner{
+      display:flex;
+      gap:10px;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 980px){
+      h1{font-size:34px}
+      .grid{grid-template-columns:1fr}
+      .contact{grid-template-columns:1fr}
+      .menu{display:none}
+    }
+
+    @media (max-width: 420px){
+      h1{font-size:30px}
+      .hero-card{padding:18px}
+      .certificate,.location{font-size:12px}
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <div class="nav">
+    <div class="container">
+      <div class="nav-inner">
+
+        <div class="brand">
+          <img src="logo.png" class="logo-img" alt="Deshpande Associates Logo">
+          <div>
+            <div class="brand-title">DESHPANDE ASSOCIATES</div>
+            <div class="brand-sub">Legal Service Provider</div>
+          </div>
+        </div>
+
+        <div class="menu">
+          <a href="#services">Services</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+
+      <div class="hero-grid">
+
+        <div class="hero-card">
+
+          <div class="top-strip">
+            <div class="certificate">◆ <b>Payment After Work</b> | Within 24 Hours</div>
+            <div class="location">100% Online Services</div>
+          </div>
+
+          <h1>GST, ITR, FSSAI & MSME Services</h1>
+
+          <p class="sub">
+            Professional compliance services with fast response.
+            100% online process — available across India.
+          </p>
+
+          <div class="mini">
+            <span>✔ Payment After Work</span>
+            <span>✔ Within 24 Hours</span>
+            <span>✔ All India Services</span>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="container">
+
+      <div class="section-title">
+        <div>
+          <h2>Services</h2>
+          <p>Select a service and message us directly on WhatsApp.</p>
+        </div>
+      </div>
+
+      <div class="grid">
+
+        <!-- GST REGISTRATION -->
+        <div class="card">
+          <div class="top">
+            <h4>GST Registration</h4>
+            <div class="price">₹599/-</div>
+          </div>
+          <p>New GST registration for businesses, shops & online sellers.</p>
+          <div class="pill">Fast Processing</div>
+          <div class="card-actions">
+            <a class="btn btn-wa btn-small" target="_blank"
+              href="https://wa.me/916360886409?text=Hello%20Deshpande%20Associates%2C%0A%0AI%20would%20like%20to%20apply%20for%20GST%20Registration.%0A%0APlease%20share%20the%20required%20documents%20and%20process.%0A%0AThank%20you.">
+              WhatsApp Now
+            </a>
+          </div>
+        </div>
+
+        <!-- GST RETURN -->
+        <div class="card">
+          <div class="top">
+            <h4>GST Return Filing</h4>
+            <div class="price">₹299/-</div>
+          </div>
+          <p>GSTR-1 & GSTR-3B filing with compliance support.</p>
+          <div class="pill">Monthly / Quarterly</div>
+          <div class="card-actions">
+            <a class="btn btn-wa btn-small" target="_blank"
+              href="https://wa.me/916360886409?text=Mujhe%20GST%20Return%20Filing%20service%20chahiye">
+              WhatsApp Now
+            </a>
+          </div>
+        </div>
+
+        <!-- FSSAI -->
+        <div class="card">
+          <div class="top">
+            <h4>FSSAI License</h4>
+            <div class="price">₹499/-</div>
+          </div>
+          <p>FSSAI Basic / State license for food business.</p>
+          <div class="pill">Basic / State</div>
+          <div class="card-actions">
+            <a class="btn btn-wa btn-small" target="_blank"
+              href="https://wa.me/916360886409?text=Mujhe%20FSSAI%20License%20service%20chahiye">
+              WhatsApp Now
+            </a>
+          </div>
+        </div>
+
+        <!-- ITR -->
+        <div class="card">
+          <div class="top">
+            <h4>ITR Filing</h4>
+            <div class="price">₹299/-</div>
+          </div>
+          <p>Income Tax Return filing for salaried & business.</p>
+          <div class="pill">Easy Process</div>
+          <div class="card-actions">
+            <a class="btn btn-wa btn-small" target="_blank"
+              href="https://wa.me/916360886409?text=Mujhe%20ITR%20Filing%20service%20chahiye">
+              WhatsApp Now
+            </a>
+          </div>
+        </div>
+
+        <!-- MSME -->
+        <div class="card">
+          <div class="top">
+            <h4>MSME / Udyam Registration</h4>
+            <div class="price">₹249/-</div>
+          </div>
+          <p>Udyam registration for benefits, loans & schemes.</p>
+          <div class="pill">Instant Support</div>
+          <div class="card-actions">
+            <a class="btn btn-wa btn-small" target="_blank"
+              href="https://wa.me/916360886409?text=Hello%20Deshpande%20Associates%2C%0A%0AI%20would%20like%20to%20apply%20for%20MSME%20%2F%20Udyam%20Registration.%0A%0APlease%20guide%20me%20regarding%20the%20required%20documents%20and%20process.%0A%0AThank%20you.">
+              WhatsApp Now
+            </a>
+          </div>
+        </div>
+
+        <!-- OTHER -->
+        <div class="card">
+          <div class="top">
+            <h4>Other Services</h4>
+            <div class="price">Ask</div>
+          </div>
+          <p>Need any other compliance service? Message us on WhatsApp.</p>
+          <div class="pill">All India</div>
+          <div class="card-actions">
+            <a class="btn btn-wa btn-small" target="_blank"
+              href="https://wa.me/916360886409?text=Mujhe%20other%20service%20chahiye%2C%20please%20guide%20karo">
+              WhatsApp Now
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CONTACT DETAILS NOW BELOW OTHER SERVICES -->
+      <div class="side">
+        <h3>Contact Details</h3>
+        <p>For any service, click WhatsApp button below service card.</p>
+        <ul>
+          <li><b style="color:var(--text);">Phone:</b> 6360886409</li>
+          <li><b style="color:var(--text);">Email:</b> deshpandeassociates16@gmail.com</li>
+          <li><b style="color:var(--text);">Service Area:</b> All India</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <div class="section-title">
+        <div>
+          <h2>Pricing</h2>
+          <p>Transparent pricing. For complex work, charges may vary.</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <div class="top">
+            <h4>GST Registration</h4>
+            <div class="price">₹599/-</div>
+          </div>
+          <p>Complete guidance + online filing support.</p>
+        </div>
+
+        <div class="card">
+          <div class="top">
+            <h4>GST Return Filing</h4>
+            <div class="price">₹299/-</div>
+          </div>
+          <p>GSTR-1 / GSTR-3B filing support.</p>
+        </div>
+
+        <div class="card">
+          <div class="top">
+            <h4>FSSAI License</h4>
+            <div class="price">₹499/-</div>
+          </div>
+          <p>Basic / State license application support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-title">
+        <div>
+          <h2>Contact</h2>
+          <p>Services available across India.</p>
+        </div>
+      </div>
+
+      <div class="contact">
+        <div class="box">
+          <h3>Quick Contact</h3>
+          <div class="info">
+            <b style="color:var(--text);">Phone:</b> <a href="tel:+916360886409">6360886409</a><br>
+            <b style="color:var(--text);">Email:</b> <a href="mailto:deshpandeassociates16@gmail.com">deshpandeassociates16@gmail.com</a><br>
+            <b style="color:var(--text);">Service Area:</b> All India
+          </div>
+        </div>
+
+        <div class="box">
+          <h3>Working Style</h3>
+          <div class="info">
+            ✔ Payment After Work<br>
+            ✔ Within 24 Hours (for most services)<br>
+            ✔ 100% Online Process<br>
+            ✔ Professional Support & Guidance
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Deshpande Associates. All Rights Reserved.</div>
+      <div>Legal Service Provider • All India</div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("year").innerText = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
